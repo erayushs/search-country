@@ -58,12 +58,14 @@ const App = () => {
       <div className="grid-container">
         {filteredCountries.map((country) => (
           <div className="countryCard" key={country?.name?.common}>
-            <img
-              src={country?.flags?.png}
-              alt={`Flag of ${country?.name?.common}`}
-              className="flag"
-            />
-            <h3>{country?.name?.common}</h3>
+            <div>
+              <img
+                src={country?.flags?.png}
+                alt={`Flag of ${country?.name?.common}`}
+                className="flag"
+              />
+              <h2>{country?.name?.common}</h2>
+            </div>
           </div>
         ))}
       </div>
